@@ -1,14 +1,17 @@
 import React from 'react'
-
+import styles from "../styles/card.module.scss"
 const Card = () => {
   return (
-    <div class="card-container" id="maincard">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">How did we do?</h2>
-          <p class="card-p">
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
+    <div className={styles.card_container} id="maincard">
+      <div className={styles.card}>
+        <div className={styles.card_body}>
+        <div className={styles.title_date_wrap}>
+        <h2 className={styles.card_title}>The Octocat</h2>
+        <h4>22/12/1998</h4>
+
+        </div>
+          <p className={styles.card_p}>
+          
           </p>
           </div>
           </div>
