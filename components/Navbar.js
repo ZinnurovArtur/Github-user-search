@@ -1,9 +1,12 @@
-
+ import styles from "../styles/navbar.module.scss"
 const Navbar =() => {
   return (
-    <div className='navbar'>
-        <div className='title-nav'><h2>DevSearch</h2></div>
-        <div className='theme-change'>Light</div>
+    <div className={styles.navbar}>
+    <div className={styles.wrap_nav}>
+    <div className={styles.title}><h2>DevSearch</h2></div>
+        <div className={styles.theme_change}>Light</div>
+    </div>
+        
     </div>
   )
 }
