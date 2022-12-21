@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+.card_container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+}
+.card_container .card .card_title {
+  word-spacing: 3px;
+  text-align: left;
+}
+.card_container .card .card_body {
+  flex: 1;
+  padding: 2rem;
+}
+.card_container .card .card_p {
+  text-align: center;
+  color: #7c8798;
+  font-size: 15px;
+  margin-top: -2rem;
+  line-height: 1.7;
+  font-weight: 400;
+  white-space: pre-line;
+}
+
+.title_date_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=card.module.css.map */
