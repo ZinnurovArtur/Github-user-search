@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+.navbar .title {
+  font-weight: 700;
+  color: black;
+  text-align: left;
+}
+.navbar .theme_change {
+  font-weight: 400;
+  color: black;
+}
+
+.wrap_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=navbar.module.css.map */
