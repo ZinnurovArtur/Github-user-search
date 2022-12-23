@@ -18,6 +18,7 @@ $margin_spacing: 0rem;
       margin: $margin_spacing;
       word-spacing: 3px;
       text-align: right;
+      color: var(--grey);
     }
     .card_link {
       margin: $margin_spacing;
@@ -60,14 +61,35 @@ $margin_spacing: 0rem;
       object-position: center;
     }
 
-    .list_main{
+    .list_main {
       display: flex;
       justify-content: space-between;
       background-color: $medium-grey;
       align-items: flex-start;
       border-radius: 10px;
       margin-top: 1rem;
+      margin-bottom: 2rem;
       padding: 1rem;
+    }
+
+    .links_grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      row-gap: 18px;
+
+      .user_link {
+        margin-left: 20px;
+        color: var(--darker-blue);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        margin-left: 20px;
+        color: var(--darker-blue);
+      }
     }
   }
 }
