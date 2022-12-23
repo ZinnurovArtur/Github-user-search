@@ -15,12 +15,17 @@ $desktop-width: 1440px;
 
 body {
   min-height: 100vh;
- 
   font-size: 1rem;
   background-color: $medium-grey;
   align-items: center;
   display: flex;
   justify-content: center;
+  --primary-color: #{$primary-color};
+  --darker-blue: #{$darker-blue};
+  --very-dark-blue: #{$very-dark-blue};
+  --neutral-whiter: #{$neutral-whiter};
+  --medium-grey: #{$medium-grey};
+  --grey: #{$grey};
 }
 
 * {
@@ -31,8 +36,6 @@ body {
   transition: all 0.2s ease-in-out;
   margin: 0;
   padding: 0;
-
-
 }
 h1,
 h2 {

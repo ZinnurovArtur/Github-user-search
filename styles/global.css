@@ -1,13 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 body {
   min-height: 100vh;
-  font-family: "Outfit", sans-serif;
-  font-weight: 400;
   font-size: 1rem;
-  background-color: #F6F8FF;
+  background-color: #f6f8ff;
   align-items: center;
   display: flex;
   justify-content: center;
+  --primary-color: #0079ff;
+  --darker-blue: #4b6a9b;
+  --very-dark-blue: #2b3442;
+  --neutral-whiter: #fefefe;
+  --medium-grey: #f6f8ff;
+  --grey: #697c9a;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  list-style: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -24,6 +38,6 @@ h3 {
 
 h4 {
   font-weight: 700;
-  color: #697C9A;
+  color: #697c9a;
   text-align: left;
 }/*# sourceMappingURL=global.css.map */
