@@ -82,4 +82,12 @@
 .card_container .card .links_grid span {
   margin-left: 20px;
   color: var(--darker-blue);
+}
+@media (max-width: 650px) {
+  .card_container .card .links_grid {
+    grid-template-columns: 1fr;
+  }
+  .card_container .card .image_cover {
+    display: none;
+  }
 }/*# sourceMappingURL=card.module.css.map */

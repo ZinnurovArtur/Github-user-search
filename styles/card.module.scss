@@ -91,5 +91,15 @@ $margin_spacing: 0rem;
         color: var(--darker-blue);
       }
     }
+
+    @media (max-width: 650px) {
+      .links_grid {
+        grid-template-columns: 1fr;
+      }
+
+      .image_cover{
+        display: none;
+      }
+    }
   }
 }

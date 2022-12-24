@@ -15,6 +15,15 @@
   font-weight: 400;
   margin-right: 0.5rem;
 }
+.search_container .main_search::-moz-placeholder {
+  color: var(--par-col);
+}
+.search_container .main_search:-ms-input-placeholder {
+  color: var(--par-col);
+}
+.search_container .main_search::placeholder {
+  color: var(--par-col);
+}
 .search_container svg {
   margin: 0 1rem 0 1rem;
 }
