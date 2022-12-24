@@ -7,8 +7,27 @@
     text-align: left;
   }
   .theme_change {
-    font-weight: $font-regular;
-    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey);
+
+    .title_theme {
+      font-weight: $font-bold;
+      text-transform: uppercase;
+
+      letter-spacing: 2.5px;
+    }
+    svg {
+      margin-left: 18px;
+    }
+
+    &:hover {
+      color: black;
+      path{
+        fill: black;
+      }
+    }
   }
 }
 
@@ -17,4 +36,5 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }

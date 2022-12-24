@@ -37,7 +37,14 @@ h3 {
 }
 
 h4 {
-  font-weight: 700;
+  font-weight: 400;
   color: #697c9a;
   text-align: left;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
 }/*# sourceMappingURL=global.css.map */

@@ -5,8 +5,24 @@
   text-align: left;
 }
 .navbar .theme_change {
-  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey);
+}
+.navbar .theme_change .title_theme {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+.navbar .theme_change svg {
+  margin-left: 18px;
+}
+.navbar .theme_change:hover {
   color: black;
+}
+.navbar .theme_change:hover path {
+  fill: black;
 }
 
 .wrap_nav {
@@ -14,4 +30,5 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=navbar.module.css.map */

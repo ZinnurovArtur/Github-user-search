@@ -57,7 +57,7 @@
 }
 .card_container .card .list_main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #f6f8ff;
   align-items: flex-start;
   border-radius: 10px;
