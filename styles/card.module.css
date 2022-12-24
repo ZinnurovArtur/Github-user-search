@@ -2,7 +2,7 @@
 .card_container .card {
   display: flex;
   align-items: flex-start;
-  background-color: white;
+  background-color: var(--neutral-whiter);
   border-radius: 1rem;
   padding: 3rem;
 }
@@ -30,7 +30,7 @@
 }
 .card_container .card .card_p {
   text-align: center;
-  color: #7c8798;
+  color: var(--par-col);
   font-size: 15px;
   margin-top: 1rem;
   font-weight: 400;
@@ -58,7 +58,7 @@
 .card_container .card .list_main {
   display: flex;
   justify-content: space-around;
-  background-color: #f6f8ff;
+  background-color: var(--medium-grey);
   align-items: flex-start;
   border-radius: 10px;
   margin-top: 1rem;

@@ -6,7 +6,10 @@ $font-size: 15px;
 $primary-color: #0079ff;
 $darker-blue: #4b6a9b;
 $very-dark-blue: #2b3442;
+$head-col:black;
+$par-col:#7c8798;
 $neutral-whiter: #fefefe;
+
 $medium-grey: #f6f8ff;
 $grey: #697c9a;
 
@@ -16,7 +19,7 @@ $desktop-width: 1440px;
 body {
   min-height: 100vh;
   font-size: 1rem;
-  background-color: $medium-grey;
+  background-color: var(--medium-grey);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -27,6 +30,22 @@ body {
   --neutral-whiter: #{$neutral-whiter};
   --medium-grey: #{$medium-grey};
   --grey: #{$grey};
+  --head-col:#{$head-col};
+  --par-col:#{$par-col};
+
+
+}
+[data-theme='dark'],
+[data-theme='dark'] body{
+  --primary-color: #{$primary-color};
+  --darker-blue: white;
+  --very-dark-blue: #{$very-dark-blue};
+  --neutral-whiter: #1E2A47;
+  --medium-grey: #141D2F;
+  --grey: white;
+  --head-col:white;
+  --par-col:#{$par-col};
+
 }
 
 * {
@@ -41,16 +60,16 @@ body {
 h1,
 h2 {
   font-weight: $font-bold;
-  color: black;
+  color: var(--head-col);
   text-align: left;
 }
 h3 {
   font-weight: $font-regular;
-  color: #0079ff;
+  color: var(--primary-color);
 }
 h4 {
   font-weight: $font-regular;
-  color: $grey;
+  color: var(--grey);
   text-align: left;
 }
 button {
@@ -65,8 +84,7 @@ input {
   border: none;
 }
 
-
-@media (max-width:650px){
+@media (max-width: 650px) {
   body {
     padding: 32px 24px 80px 24px;
   }

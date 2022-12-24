@@ -4,7 +4,7 @@ $margin_spacing: 0rem;
   .card {
     display: flex;
     align-items: flex-start;
-    background-color: white;
+    background-color: var(--neutral-whiter);
     border-radius: 1rem;
     padding: 3rem;
 
@@ -36,7 +36,7 @@ $margin_spacing: 0rem;
 
     .card_p {
       text-align: center;
-      color: #7c8798;
+      color: var(--par-col);
       font-size: $font-size;
       margin-top: 1rem;
       font-weight: $font-regular;
@@ -64,7 +64,7 @@ $margin_spacing: 0rem;
     .list_main {
       display: flex;
       justify-content: space-around;
-      background-color: $medium-grey;
+      background-color: var(--medium-grey);
       align-items: flex-start;
       border-radius: 10px;
       margin-top: 1rem;
