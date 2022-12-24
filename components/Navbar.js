@@ -1,13 +1,15 @@
+import { useTheme } from "next-themes";
 import styles from "../styles/navbar.module.scss";
 const Navbar = () => {
+  const {theme,setTheme} = useTheme()
   return (
     <div className={styles.navbar}>
       <div className={styles.wrap_nav}>
         <div className={styles.title}>
           <h2>DevSearch</h2>
         </div>
-        <button className={styles.theme_change}>
-          <span className={styles.title_theme}>Dark</span>
+        <button className={styles.theme_change} onClick={theme == 'dark'?() => setTheme('light'):() => setTheme('dark')}>
+         {theme == 'light'? <span className={styles.title_theme}>Dark</span>: <span className={styles.title_theme}>Light</span>} 
           <svg
             width="20"
             height="20"
