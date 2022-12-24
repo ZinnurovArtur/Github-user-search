@@ -1,0 +1,31 @@
+@import "variables.module.scss";
+
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-whiter);
+  margin-bottom: 1rem;
+  box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  .main_search {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: $font-regular;
+    margin-right: 0.5rem;
+  }
+  svg{
+    margin: 0 1rem 0 1rem;
+  }
+  .submit_button{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    font-weight: $font-bold;
+    color: var(--neutral-whiter);
+    font-size: 1rem;
+
+  }
+}

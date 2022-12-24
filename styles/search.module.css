@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-whiter);
+  margin-bottom: 1rem;
+  box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.search_container .main_search {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+.search_container svg {
+  margin: 0 1rem 0 1rem;
+}
+.search_container .submit_button {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 700;
+  color: var(--neutral-whiter);
+  font-size: 1rem;
+}/*# sourceMappingURL=search.module.css.map */
