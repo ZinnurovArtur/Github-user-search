@@ -1,5 +1,18 @@
 import styles from "../styles/search.module.scss";
-const Search = () => {
+import { useState } from "react";
+
+const Search = ({ setSearch, setError, error }) => {
+  const [value, setValue] = useState("");
+
+  const submitSearch = (e) => {
+    e.preventDefault();
+    setSearch(value);
+  };
+
+  const removeError = () => {
+    setError((prev) => !prev);
+  };
+
   return (
     <div className={styles.search_container}>
       <label htmlFor="search">
@@ -20,11 +33,21 @@ const Search = () => {
       </label>
 
       <input
+        value={value}
         className={styles.main_search}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+        onInput={(e) => {
+          if (error) {
+            removeError();
+          }
+        }}
         placeholder="Search GitHub username..."
         id="search"
       />
-      <button type="submit" className={styles.submit_button}>
+      <div>{error && <div className={styles.search_error}>No results</div>}</div>
+      <button type="submit" className={styles.submit_button} onClick={submitSearch}>
         Search
       </button>
     </div>

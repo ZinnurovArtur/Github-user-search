@@ -1,13 +1,36 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Navbar from '../components/Navbar'
-import Card from '../components/Card'
-import Search from '../components/Search'
-import { Inter } from '@next/font/google'
+import Head from "next/head";
+import Image from "next/image";
+import Navbar from "../components/Navbar";
+import Card from "../components/Card";
+import Search from "../components/Search";
+import { Inter } from "@next/font/google";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(false);
+
+  const getData = async (username) => {
+    try {
+      const res = await axios.get(`https://api.github.com/users/${username}`);
+      setError(false);
+      setUser(res.data);
+    } catch {
+      setError(true);
+    }
+  };
+
+  const setSearch = (username) => {
+    getData(username);
+  };
+
+  useEffect(()=>{
+    getData('octocat')
+  },[])
+
   return (
     <>
       <Head>
@@ -17,10 +40,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-      <Navbar/>
-      <Search/>
-      <Card/>
+        <Navbar />
+        <Search setSearch={setSearch} error={error} setError={setError} />
+        <Card user={user} />
       </main>
     </>
-  )
+  );
 }
