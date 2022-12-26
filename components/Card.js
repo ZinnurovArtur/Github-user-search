@@ -1,7 +1,11 @@
-import React from "react";
 import Image from "next/image";
 import styles from "../styles/card.module.scss";
-const Card = () => {
+
+const Card = ({ user }) => {
+  const removeHttp = (url) => {
+    if (!url) return;
+    return url.replace(/^https?:\/\//, "");
+  };
   return (
     <div className={styles.card_container} id="maincard">
       <div className={styles.card}>
@@ -16,29 +20,39 @@ const Card = () => {
         </div>
         <div className={styles.main_data}>
           <div className={styles.main_top}>
-            <h2 className={styles.card_title}>The Octocat</h2>
+            <h2 className={styles.card_title}>{user?.login}</h2>
             <h4 className={styles.card_date}>Joined 22 Dec 1998</h4>
-            <h3 className={styles.card_link}>@loh</h3>
+            <a
+              href={`https://github.com/${user?.login}`}
+              className={styles.card_link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h3 className={styles.card_link}>@{user?.login}</h3>
+            </a>
           </div>
-          <div className={styles.bio}>
-            <p className={styles.card_p}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-              odio. Quisque volutpat mattis eros.
-            </p>
-          </div>
+          {user?.bio == null ? (
+            <div className={styles.bio}>
+              <p className={styles.card_p}>No bio provided</p>
+            </div>
+          ) : (
+            <div className={styles.bio}>
+              <p className={styles.card_p}>{user?.bio}</p>
+            </div>
+          )}
 
           <ul className={styles.list_main}>
             <li>
               <h4>Repos</h4>
-              <h2>8</h2>
+              <h2>{user?.public_repos}</h2>
             </li>
             <li>
               <h4>Followers</h4>
-              <h2>126</h2>
+              <h2>{user?.followers}</h2>
             </li>
             <li>
               <h4>Following</h4>
-              <h2>12</h2>
+              <h2>{user?.following}</h2>
             </li>
           </ul>
 
@@ -59,8 +73,13 @@ const Card = () => {
                 />
               </svg>
 
-              <span>loooh</span>
+              {user?.location == null ? (
+                <span>No location</span>
+              ) : (
+                <span>{user?.location}</span>
+              )}
             </div>
+
             <div id="portfolio_link">
               <svg
                 width="20"
@@ -78,14 +97,18 @@ const Card = () => {
                   fill="#4B6A9B"
                 />
               </svg>
-              <a
-                href="https://twitter.com"
-                className={styles.user_link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                @loh
-              </a>
+              {user?.blog == null ? (
+                <span>No link</span>
+              ) : (
+                <a
+                  href={user?.blog}
+                  className={styles.user_link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @{removeHttp(user?.blog)}
+                </a>
+              )}
             </div>
 
             <div id="twiter_link">
@@ -102,14 +125,18 @@ const Card = () => {
                 />
               </svg>
 
-              <a
-                href="https://twitter.com"
-                className={styles.user_link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                @twiterloh
-              </a>
+              {user?.twitter_username == null? (
+                <span>No twitter link</span>
+              ) : (
+                <a
+                  href={user?.twitter_username}
+                  className={styles.user_link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @{removeHttp(user?.twitter_username)}
+                </a>
+              )}
             </div>
             <div id="organization">
               <svg
@@ -133,14 +160,7 @@ const Card = () => {
                 />
               </svg>
 
-              <a
-                href="https://google.com"
-                className={styles.user_link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                @organiZationLoh
-              </a>
+              <span>{user?.company}</span>
             </div>
           </div>
         </div>

@@ -23,6 +23,7 @@ $margin_spacing: 0rem;
     .card_link {
       margin: $margin_spacing;
       word-spacing: 3px;
+      text-decoration: none;
     }
 
     .card_body {
@@ -35,7 +36,6 @@ $margin_spacing: 0rem;
     }
 
     .card_p {
-      text-align: center;
       color: var(--par-col);
       font-size: $font-size;
       margin-top: 1rem;
@@ -80,6 +80,7 @@ $margin_spacing: 0rem;
 
       .user_link {
         margin-left: 20px;
+        margin-right: 20px;
         color: var(--darker-blue);
         text-decoration: none;
         &:hover {
@@ -88,6 +89,7 @@ $margin_spacing: 0rem;
       }
       span {
         margin-left: 20px;
+        margin-right: 20px;
         color: var(--darker-blue);
       }
     }
@@ -97,7 +99,7 @@ $margin_spacing: 0rem;
         grid-template-columns: 1fr;
       }
 
-      .image_cover{
+      .image_cover {
         display: none;
       }
     }
