@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 .card_container .card {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
   background-color: var(--neutral-whiter);
   border-radius: 1rem;
   padding: 3rem;
@@ -20,6 +21,7 @@
 .card_container .card .card_link {
   margin: 0rem;
   word-spacing: 3px;
+  text-decoration: none;
 }
 .card_container .card .card_body {
   flex: 1;
@@ -29,7 +31,6 @@
   white-space: pre-line;
 }
 .card_container .card .card_p {
-  text-align: center;
   color: var(--par-col);
   font-size: 15px;
   margin-top: 1rem;
@@ -73,6 +74,7 @@
 }
 .card_container .card .links_grid .user_link {
   margin-left: 20px;
+  margin-right: 20px;
   color: var(--darker-blue);
   text-decoration: none;
 }
@@ -81,6 +83,7 @@
 }
 .card_container .card .links_grid span {
   margin-left: 20px;
+  margin-right: 20px;
   color: var(--darker-blue);
 }
 @media (max-width: 650px) {
@@ -89,5 +92,10 @@
   }
   .card_container .card .image_cover {
     display: none;
+  }
+}
+@media (max-width: 650px) {
+  .card_container .card {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=card.module.css.map */

@@ -3,7 +3,8 @@ $margin_spacing: 0rem;
 .card_container {
   .card {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
     background-color: var(--neutral-whiter);
     border-radius: 1rem;
     padding: 3rem;
@@ -102,6 +103,12 @@ $margin_spacing: 0rem;
       .image_cover {
         display: none;
       }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .card {
+      flex-direction: column;
     }
   }
 }

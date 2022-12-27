@@ -34,4 +34,8 @@
   font-weight: 700;
   color: white;
   font-size: 1rem;
+}
+.search_container .search_error {
+  margin-right: 10px;
+  color: red;
 }/*# sourceMappingURL=search.module.css.map */

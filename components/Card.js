@@ -11,7 +11,7 @@ const Card = ({ user }) => {
       <div className={styles.card}>
         <div className={styles.image_wrapper}>
           <Image
-            src="/img/download.png"
+            src={user?.avatar_url || "/img/download.png"}
             alt="octocat"
             width={117}
             height={117}
@@ -97,7 +97,7 @@ const Card = ({ user }) => {
                   fill="#4B6A9B"
                 />
               </svg>
-              {user?.blog == null ? (
+              {user?.blog == null || "" ? (
                 <span>No link</span>
               ) : (
                 <a
@@ -125,7 +125,7 @@ const Card = ({ user }) => {
                 />
               </svg>
 
-              {user?.twitter_username == null? (
+              {user?.twitter_username == null ? (
                 <span>No twitter link</span>
               ) : (
                 <a
@@ -160,7 +160,11 @@ const Card = ({ user }) => {
                 />
               </svg>
 
-              <span>{user?.company}</span>
+              {user?.company == null ? (
+                <span>No organization</span>
+              ) : (
+                <span>{user?.company}</span>
+              )}
             </div>
           </div>
         </div>
