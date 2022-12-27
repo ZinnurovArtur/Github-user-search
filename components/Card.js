@@ -6,10 +6,19 @@ const Card = ({ user }) => {
     if (!url) return;
     return url.replace(/^https?:\/\//, "");
   };
+
+  const dateFormat = (date) =>{
+    let newdate = new Date(date)
+    let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    let currDate = newdate.getDate()
+    let currYear = newdate.getFullYear()
+    let currMonth = months[newdate.getMonth()]
+    return currDate + ' ' + currMonth + ' ' + currYear
+
+  }
   return (
     <div className={styles.card_container} id="maincard">
       <div className={styles.card}>
-        <div className={styles.image_wrapper}>
           <Image
             src={user?.avatar_url || "/img/download.png"}
             alt="octocat"
@@ -17,11 +26,18 @@ const Card = ({ user }) => {
             height={117}
             className={styles.image_cover}
           />
-        </div>
         <div className={styles.main_data}>
+       
           <div className={styles.main_top}>
+          <Image
+            src={user?.avatar_url || "/img/download.png"}
+            alt="octocat"
+            width={70}
+            height={70}
+            className={styles.image_mobile}
+          />
             <h2 className={styles.card_title}>{user?.login}</h2>
-            <h4 className={styles.card_date}>Joined 22 Dec 1998</h4>
+            <h4 className={styles.card_date}>Joined {dateFormat(user?.created_at)}</h4>
             <a
               href={`https://github.com/${user?.login}`}
               className={styles.card_link}
