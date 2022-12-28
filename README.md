@@ -44,9 +44,7 @@ Users should be able to:
 
 
 ### Useful resources
-
 - [Grid source](https://mastery.games/post/overlapping-grid-items/) - I used this website to understand Grid properties espesially grid-area
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 
 
