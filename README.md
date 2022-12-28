@@ -2,6 +2,17 @@
 
 This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). Frontend Mentor challenges helped me improve my coding skills by building realistic projects. 
 
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm install 
+npm run dev
+# or
+npm run build 
+```
+
 
 ## Overview
 
